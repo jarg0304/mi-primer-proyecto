@@ -1,6 +1,6 @@
-# Mi Primer Proyecto Web ??
+# Mi Primer Proyecto Web
 
-Esta es una descripción breve y emocionante de lo que hace mi p�gina.
+Esta es una descripción breve y emocionante de lo que hace mi páÑgina.
 
 ## Tecnologías utilizadas
 * **HTML5** para la estructura.
