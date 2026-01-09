@@ -1,22 +1,19 @@
 name: Revisión de HTML 🚀
 
-# 1. Cuándo se activa:
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 
-# 2. Qué va a hacer el robot:
 jobs:
-  build:
-    runs-on: ubuntu-latest # Una PC virtual con Linux
-
+  lint:
+    runs-on: ubuntu-latest
     steps:
       - name: Descargar mi código
-        uses: actions/checkout@v4 # El robot "clona" tu código
+        uses: actions/checkout@v4
 
-      - name: Validar HTML
-        uses: html-validate/html-validate-action@v1 # El robot revisa el HTML
+      - name: Revisar HTML con HTMLHint
+        uses: htmlhint/htmlhint-action@v2
         with:
-          include: 'index.html'
+          pattern: 'index.html'
