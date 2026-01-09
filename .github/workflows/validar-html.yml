@@ -1,0 +1,21 @@
+name: Revisión de HTML
+
+on: 
+  push:
+    branches: [ main ]
+  pull-request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar mi código
+        uses: actions/checkout@v4
+
+      - name: Validar HTML
+        uses: html-validate/html-validate-action@v1
+      with:
+        include: 'index.html'
+      
