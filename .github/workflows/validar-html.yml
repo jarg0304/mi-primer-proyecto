@@ -13,7 +13,8 @@ jobs:
       - name: Descargar mi código
         uses: actions/checkout@v4
 
-      - name: Revisar HTML con HTMLHint
-        uses: htmlhint/htmlhint-action@v2
-        with:
-          pattern: 'index.html'
+      - name: Instalar validador
+        run: npm install -g htmlhint
+
+      - name: Ejecutar validación
+        run: htmlhint index.html
