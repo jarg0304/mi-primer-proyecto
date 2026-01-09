@@ -1,21 +1,22 @@
-name: Revisión de HTML
+name: Revisión de HTML 🚀
 
-on: 
+# 1. Cuándo se activa:
+on:
   push:
     branches: [ main ]
-  pull-request:
+  pull_request:
     branches: [ main ]
 
+# 2. Qué va a hacer el robot:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Una PC virtual con Linux
 
     steps:
       - name: Descargar mi código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4 # El robot "clona" tu código
 
       - name: Validar HTML
-        uses: html-validate/html-validate-action@v1
-      with:
-        include: 'index.html'
-      
+        uses: html-validate/html-validate-action@v1 # El robot revisa el HTML
+        with:
+          include: 'index.html'
